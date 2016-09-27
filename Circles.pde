@@ -8,15 +8,33 @@ class Circles{
   float cWidth;
   //color
   float colors;
-  
   //array
   float[] allCircles = new float[20];
+  
+  
+    /*
+    //constructors
+    Circles(){     
+      // initialise the instance variables
+      xPos = 400;
+      yPos = 300;
+      cWidth = 300; 
+    }
     
-  //create circles
-  void randCircles(){
+    //constructor
+    Circles(float x, float y, float w){
+      xPos = x;
+      yPos = y;
+      cWidth = w;
+    }
+}
+  */
     
-    //repeat loop untill 20 circles are made
-    for (int i=0; i< 20; i++){
+    
+    
+    // WIP
+    //create circles
+    void createCircles(){
     
     //random width
     float r = random(40);  //add 10 for 10-50px width
@@ -26,9 +44,16 @@ class Circles{
     //random y pos
     yPos = int(random(50));
     
-    ellipse(width/xPos, height/yPos, r+10, r+10);        
-    }
-  }
+    //repeat loop untill 20 circles are made
+      
+    //draw 20 circles
+    for (int i=0; i< 20; i++){
+    ellipse(width/xPos, height/yPos, r+10, r+10);  
+    }  
 }
+    
+    
+  
+
     
   

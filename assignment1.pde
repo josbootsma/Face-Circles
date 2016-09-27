@@ -1,6 +1,7 @@
-//initialise face
+//initialise face and circles
 Face jFace;
-Circles jCircles;
+
+float counter = 0;
 
 void setup() {
   size(800,600);
@@ -9,15 +10,16 @@ void setup() {
   // Create a Face object
   jFace = new Face();
   
-  //Create a Circles object
-   jCircles = new Circles();
 }
 
 void draw() {
   //create a new background
   background(51); 
   
+  //mouseface
   jFace.drawFace();
-  jCircles.randCircles();
-
-}
+  
+  ellipse(120, 100, 110, 110);
+  ellipse(412, 60, 18, 18);
+ 
+  }

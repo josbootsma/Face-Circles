@@ -1,7 +1,4 @@
-class Face {
-  
-  //constructor goes here
-  
+class Face{
   
   void drawFace(){   
     //face
@@ -20,5 +17,5 @@ class Face {
     
     //nose
     ellipse(mouseX,mouseY+10,10,25); 
-  }
-}
+    }//end drawFace
+}//end class
