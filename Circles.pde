@@ -1,59 +1,45 @@
-class Circles{
-  
-  //variables
-  //position
-  float xPos;
-  float yPos;
-  //width
-  float cWidth;
-  //color
-  float colors;
-  //array
-  float[] allCircles = new float[20];
-  
-  
-    /*
-    //constructors
-    Circles(){     
-      // initialise the instance variables
-      xPos = 400;
-      yPos = 300;
-      cWidth = 300; 
-    }
-    
-    //constructor
-    Circles(float x, float y, float w){
-      xPos = x;
-      yPos = y;
-      cWidth = w;
-    }
-}
-  */
-    
-    
-    
-    // WIP
-    //create circles
-    void createCircles(){
-    
-    //random width
-    float r = random(40);  //add 10 for 10-50px width
-      
-    //random x pos
-    xPos = int(random(50));
-    //random y pos
-    yPos = int(random(50));
-    
-    //repeat loop untill 20 circles are made
-      
-    //draw 20 circles
-    for (int i=0; i< 20; i++){
-    ellipse(width/xPos, height/yPos, r+10, r+10);  
-    }  
-}
-    
-    
-  
+class Circle{
+float x; // x pos
+float y; // y pos
+float w; // width
 
-    
+float c1; // color 1: R
+float c2; // color 2: G
+float c3; // color 3: B
+
+  // Constructor
+  Circle(float cx, float cy, float cw, float cc1, float cc2, float cc3){
+    x = cx;
+    y = cy;
+    w = cw;
+    c1 = cc1;
+    c2 = cc2;
+    c3 = cc3;
+  }
   
+  void drawCircle() // ------------------------------------------------------- drawCircle()
+  {
+    pushMatrix();
+    fill(c1,c2,c3);
+    ellipse(x, y, w, w);
+    translate(x,y);
+    popMatrix();
+  } // ----------------------------------------------------------------------- End of drawCircle()
+  // ------------------------------------------------------------------------- Move methods
+  void moveUP()  
+  {
+    y--;
+  }
+  void moveDOWN()
+  {
+    y++;
+  }    
+  void moveLEFT()
+  {
+    x--;
+  }    
+  void moveRIGHT()
+  {
+    x++;
+  } // ------------------------------------------------------------------------ End move methods 
+} // -------------------------------------------------------------------------- End Circle class 
